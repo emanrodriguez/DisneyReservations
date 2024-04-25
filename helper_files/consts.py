@@ -1,14 +1,13 @@
 DISNEY_API_URL = "https://disneyland.disney.go.com/passes/blockout-dates/api/get-availability/"
 
-NUM_MONTH_AVAILABILITY = 2
-
+NUM_MONTH_AVAILABILITY = 3
 
 DISNEY_PARK_LOCATIONS = {
     'California Disneyland Resort' : 'DLR',
     'Walt Disney World' : 'WDW'
 }
 
-DISNEY_LOCATION_SUBPARKS = {
+DISNEY_PARK_FACILITIES = {
     'WDW': {
         'WDW_ALL':{
             'parkType': 'All Parks'
@@ -25,9 +24,16 @@ DISNEY_LOCATION_SUBPARKS = {
         'WDW_MK':{
             'parkType': 'Magic Kingdom'
         }
+    },
+    'DLR':{
+        'DLR_CA':{
+            'parkType': 'California Adventure'
+        },
+        'DLR_DP':{
+            'parkType': 'Disney Park'
+        }
     }
 }
-
 
 DISNEY_PARK_PASSES = {
     'DLR' : ('inspire-key-pass','believe-key-pass','enchant-key-pass','imagine-key-pass','dream-key-pass'),
@@ -39,12 +45,12 @@ DISNEY_PARK_DETAILS = {
     'DLR' : {
         'LOCATION_NAME' : 'California Disneyland Resort',
         'ANNUAL_PASSES' : DISNEY_PARK_PASSES['DLR'],
-        'SUB_PARKS' : None
+        'FACILITIES' : None
     },
     'WDW' : {
         'LOCATION_NAME' : 'Walt Disney World',
         'ANNUAL_PASSES' : DISNEY_PARK_PASSES['WDW'],
-        'SUB_PARKS' : DISNEY_LOCATION_SUBPARKS['WDW']
+        'FACILITIES' : DISNEY_PARK_FACILITIES['WDW']
     }
 }
 
